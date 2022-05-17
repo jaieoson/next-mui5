@@ -19,7 +19,9 @@ import ListItemText from '@mui/material/ListItemText';
 import InboxIcon from '@mui/icons-material/MoveToInbox';
 import MailIcon from '@mui/icons-material/Mail';
 
-
+import ResponsiveAppBar from '../appBar';
+import Cards from '../cards';
+import Dark from '../darkMode';
 
 const drawerWidth = 240;
 
@@ -104,12 +106,14 @@ export default function PersistentDrawerLeft() {
             Persistent drawer
           </Typography>
 
-         
+         <ResponsiveAppBar/>
           
         </Toolbar>
 
         
       </AppBar>
+
+
       <Drawer
         sx={{
           width: drawerWidth,
@@ -160,6 +164,12 @@ export default function PersistentDrawerLeft() {
 
       <Main open={open}>
         <DrawerHeader />
+
+<Dark/>
+
+<Cards/>
+
+
         <Typography paragraph>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
           tempor incididunt ut labore et dolore magna aliqua. Rhoncus dolor purus non

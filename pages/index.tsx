@@ -33,7 +33,7 @@ import Cards from '../components/cards';
 
 import Dark from '../components/darkMode';
 
-import ResponsiveAppBar from '../components/appBar';
+import PersistentDrawerLeft from '../components/drawer';
 
 export default function Home() {
 
@@ -54,13 +54,7 @@ export default function Home() {
     }}
   >
 
-<ResponsiveAppBar/>
-<Dark/>
-
-
-      <hr/>
-      <br/>
-      <Cards/>
+<PersistentDrawerLeft/>
 
   </Box>
   )
