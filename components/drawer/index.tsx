@@ -21,7 +21,7 @@ import MailIcon from '@mui/icons-material/Mail';
 
 import ResponsiveAppBar from '../appBar';
 import Cards from '../cards';
-import Dark from '../darkMode';
+
 
 const drawerWidth = 240;
 
@@ -102,9 +102,7 @@ export default function PersistentDrawerLeft() {
           </IconButton>
 
 
-          <Typography variant="h6" noWrap component="div">
-            Persistent drawer
-          </Typography>
+        
 
          <ResponsiveAppBar/>
           
@@ -165,7 +163,6 @@ export default function PersistentDrawerLeft() {
       <Main open={open}>
         <DrawerHeader />
 
-<Dark/>
 
 <Cards/>
 

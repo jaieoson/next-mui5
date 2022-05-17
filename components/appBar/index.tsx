@@ -12,7 +12,7 @@ import Button from '@mui/material/Button';
 import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 import AdbIcon from '@mui/icons-material/Adb';
-import { BorderAll } from '@mui/icons-material';
+import Dark from '../darkMode';
 
 const pages = ['Products', 'Pricing', 'Blog'];
 const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
@@ -40,7 +40,7 @@ export default function ResponsiveAppBar() {
     <AppBar position="static" sx={{boxShadow: 0 }} >
 
         
-      <Container maxWidth="lg">
+      <Container maxWidth="xl">
 
 
         <Toolbar disableGutters>
@@ -74,6 +74,8 @@ export default function ResponsiveAppBar() {
             >
               <MenuIcon />
             </IconButton>
+
+
             <Menu
               id="menu-appbar"
               anchorEl={anchorElNav}
@@ -98,6 +100,7 @@ export default function ResponsiveAppBar() {
                 </MenuItem>
               ))}
             </Menu>
+            
           </Box>
           <AdbIcon sx={{ display: { xs: 'flex', md: 'none' }, mr: 1 }} />
           <Typography
@@ -129,8 +132,11 @@ export default function ResponsiveAppBar() {
               </Button>
             ))}
           </Box>
-
+          <Dark/>
           <Box sx={{ flexGrow: 0 }}>
+
+
+
             <Tooltip title="Open settings">
               <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
                 <Avatar alt="Remy Sharp" src="https://github.com/jaieoson.png" />

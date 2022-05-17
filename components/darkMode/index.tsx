@@ -47,19 +47,7 @@ export default function Dark() {
   };
 
   return (
-    <Box
-    sx={{
-      display: 'flex',
-      flexDirection: 'column',
-      width: '100%',
-      alignItems: 'center',
-      justifyContent: 'center',
-      bgcolor: 'background.default',
-      color: 'text.primary',
-      borderRadius: 1,
-      p: 3,
-    }}
-  >
+    <div>
 
 
 {theme.palette.mode} mode
@@ -68,11 +56,11 @@ export default function Dark() {
       </IconButton>
 
 
-      <hr/>
+      
       <br/>
    
 
-  </Box>
+  </div>
   )
 }
 

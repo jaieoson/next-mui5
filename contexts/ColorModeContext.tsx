@@ -12,6 +12,7 @@ export interface ColorModeProps {
 export const ColorModeProvider = ({children} : ColorModeProps) => {
 
     const [mode, setMode] = React.useState<'light' | 'dark'>('light');
+    
     const colorMode = React.useMemo(
       () => ({
         toggleColorMode: () => {
