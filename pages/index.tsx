@@ -29,36 +29,14 @@ import { useTheme } from '@mui/material/styles';
 
 import useColorMode from '../hooks/useColorMode';
 
-import Cards from '../componenents/cards';
+import Cards from '../components/cards';
 
-interface ExpandMoreProps extends IconButtonProps {
-  expand: boolean;
-}
-
-const ExpandMore = styled((props: ExpandMoreProps) => {
-  const { expand, ...other } = props;
-  return <IconButton {...other} />;
-})(({ theme, expand }) => ({
-  transform: !expand ? 'rotate(0deg)' : 'rotate(180deg)',
-  marginLeft: 'auto',
-  transition: theme.transitions.create('transform', {
-    duration: theme.transitions.duration.shortest,
-  }),
-}));
-
+import Dark from '../components/darkMode';
 
 
 export default function Home() {
 
-  const [expanded, setExpanded] = React.useState(false);
-
-  const theme = useTheme()
-
-  const colorMode = useColorMode()
-
-  const handleExpandClick = () => {
-    setExpanded(!expanded);
-  };
+  
 
   return (
     <Box
@@ -75,11 +53,7 @@ export default function Home() {
     }}
   >
 
-
-{theme.palette.mode} mode
-      <IconButton sx={{ ml: 1 }} onClick={colorMode.toggleColorMode} color="inherit">
-        {theme.palette.mode === 'dark' ? <Brightness7Icon /> : <Brightness4Icon />}
-      </IconButton>
+<Dark/>
 
 
       <hr/>
