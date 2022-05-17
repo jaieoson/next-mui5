@@ -33,6 +33,7 @@ import Cards from '../components/cards';
 
 import Dark from '../components/darkMode';
 
+import ResponsiveAppBar from '../components/appBar';
 
 export default function Home() {
 
@@ -53,6 +54,7 @@ export default function Home() {
     }}
   >
 
+<ResponsiveAppBar/>
 <Dark/>
 
 
